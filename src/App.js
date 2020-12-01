@@ -8,27 +8,36 @@ import Nav from "./components/Nav";
 // Global Style
 import GlobalStyle from "./components/GlobalStyle/GlobalStyle";
 // Router
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
+// Animation
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  // we need to know the location page so AnimatePresence knows which pages
+  // animate with a unique key
+  // exitBeforeEnter waits to execute the animation on the next page
+  // so When the page fades out ... the next page waits to fade in
+  const location = useLocation();
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Switch>
-        <Route path="/" exact>
-          <AboutUs />
-        </Route>
-        <Route path="/work" exact>
-          <Work />
-        </Route>
-        <Route path="/work/:id">
-          <MovieDetail />
-        </Route>
-        <Route path="/contact">
-          <ContactUs />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <AboutUs />
+          </Route>
+          <Route path="/work" exact>
+            <Work />
+          </Route>
+          <Route path="/work/:id">
+            <MovieDetail />
+          </Route>
+          <Route path="/contact">
+            <ContactUs />
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }

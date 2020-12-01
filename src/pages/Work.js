@@ -6,36 +6,65 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 // React Router
 import { Link } from "react-router-dom";
+// animations
+import { motion } from "framer-motion";
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from "../animation";
 
 const Work = () => {
   return (
-    <StyedWork>
+    <StyedWork
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <motion.div variants={sliderContainer}>
+        <StyledFrame1 variants={slider}></StyledFrame1>
+        <StyledFrame2 variants={slider}></StyledFrame2>
+        <StyledFrame3 variants={slider}></StyledFrame3>
+        <StyledFrame4 variants={slider}></StyledFrame4>
+      </motion.div>
+
       <StyledMovie>
-        <h2>The Athlete</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}> The Athlete</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="athlete" />
+          <StyledHide>
+            <motion.img variants={photoAnim} src={athlete} alt="athlete" />
+          </StyledHide>
         </Link>
       </StyledMovie>
       <StyledMovie>
-        <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.h2>The Racer</motion.h2>
+        <motion.div className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={theracer} alt="theracer" />
+          <StyledHide>
+            <motion.img variants={photoAnim} src={theracer} alt="theracer" />
+          </StyledHide>
         </Link>
       </StyledMovie>
       <StyledMovie>
-        <h2>Good Times</h2>
-        <div className="line"></div>
+        <motion.h2>Good Times</motion.h2>
+        <motion.div className="line"></motion.div>
         <Link to="/work/good-times">
-          <img src={goodtimes} alt="goodtimes" />
+          <StyledHide>
+            <motion.img variants={photoAnim} src={goodtimes} alt="goodtimes" />
+          </StyledHide>
         </Link>
       </StyledMovie>
     </StyedWork>
   );
 };
 
-const StyedWork = styled.div`
+const StyedWork = styled(motion.div)`
+  background-color: white;
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
@@ -48,7 +77,7 @@ const StyledMovie = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background-color: #cccccc;
+    background-color: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -57,5 +86,25 @@ const StyledMovie = styled.div`
     object-fit: cover;
   }
 `;
-
+const StyledHide = styled.div`
+  overflow: hidden;
+`;
+const StyledFrame1 = styled(motion.div)`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 10%;
+  left: 0;
+  background-color: #fffebf;
+  z-index: 2;
+`;
+const StyledFrame2 = styled(StyledFrame1)`
+  background-color: #ff8efb;
+`;
+const StyledFrame3 = styled(StyledFrame1)`
+  background-color: #8ed2ff;
+`;
+const StyledFrame4 = styled(StyledFrame1)`
+  background-color: #8effa0;
+`;
 export default Work;

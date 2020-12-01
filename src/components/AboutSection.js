@@ -7,33 +7,46 @@ import {
 } from "../styles";
 // images
 import home1 from "../img/home1.png";
+// Framer motion
+import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
+// wave
+import Wave from "../components/Wave";
 
 const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledDescription>
-        <div className="title">
+        <motion.div>
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>true</h2>
+            <motion.h2 variants={titleAnim}>true</motion.h2>
           </StyledHide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </StyledDescription>
       <StyledImage>
-        <img src={home1} alt="Camera" />
+        <motion.img
+          // initial and animate takes the element off from staggerChildren and starts right the way
+          //initial="hidden"
+          //animate="show"
+          variants={photoAnim}
+          src={home1}
+          alt="Camera"
+        />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 };
