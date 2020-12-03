@@ -52,6 +52,23 @@ const StyledNav = styled.nav`
     padding-left: 10rem;
     position: relative;
   }
+  @media (max-width: 1274px) {
+    flex-direction: column;
+    padding: 1rem;
+    #logo {
+      display: inline-block;
+      margin: 1rem;
+    }
+    ul {
+      padding: 2rem 2rem;
+      justify-content: space-around;
+      width: 100%;
+    }
+    li {
+      padding-left: 0rem;
+      position: relative;
+    }
+  }
 `;
 
 export default Nav;

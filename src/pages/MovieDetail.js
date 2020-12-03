@@ -78,6 +78,10 @@ const SytledAwars = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1274px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const StyeldAward = styled.div`
@@ -93,6 +97,11 @@ const StyeldAward = styled.div`
   }
   p {
     padding: 2rem 0rem;
+  }
+  @media (max-width: 1274px) {
+    h3 {
+      bottom: 10%;
+    }
   }
 `;
 // ImageDisplay Component
