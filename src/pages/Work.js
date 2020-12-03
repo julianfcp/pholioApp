@@ -6,6 +6,8 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 // React Router
 import { Link } from "react-router-dom";
+// Components
+import ScrollToTop from "../components/ScrollToTop";
 // animations
 import { motion } from "framer-motion";
 import {
@@ -16,8 +18,11 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
+import { useScroll } from "../components/useScroll";
 
 const Work = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
     <StyedWork
       variants={pageAnimation}
@@ -41,24 +46,35 @@ const Work = () => {
           </StyledHide>
         </Link>
       </StyledMovie>
-      <StyledMovie>
+      <StyledMovie
+        ref={element}
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+      >
         <motion.h2>The Racer</motion.h2>
-        <motion.div className="line"></motion.div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
           <StyledHide>
             <motion.img variants={photoAnim} src={theracer} alt="theracer" />
           </StyledHide>
         </Link>
       </StyledMovie>
-      <StyledMovie>
+      <StyledMovie
+        ref={element2}
+        variants={fade}
+        animate={controls2}
+        initial="hidden"
+      >
         <motion.h2>Good Times</motion.h2>
-        <motion.div className="line"></motion.div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/good-times">
           <StyledHide>
             <motion.img variants={photoAnim} src={goodtimes} alt="goodtimes" />
           </StyledHide>
         </Link>
       </StyledMovie>
+      <ScrollToTop />
     </StyedWork>
   );
 };
@@ -73,7 +89,7 @@ const StyedWork = styled(motion.div)`
   }
 `;
 
-const StyledMovie = styled.div`
+const StyledMovie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;

@@ -13,9 +13,10 @@ export const pageAnimation = {
     },
   },
   exit: {
+    // hides the page so when navigating others pages are visibles
     opacity: 0,
     transition: {
-      duration: 0.4,
+      duration: 0.5,
     },
   },
 };
@@ -87,15 +88,15 @@ export const toggleMotion = {
 export const scrollShow = {
   hidden: {
     opacity: 0,
-    y: 100,
+    scale: 1.05,
     transition: {
-      duration: 0.5,
+      duration: 0.2,
       ease: "easeOut",
     },
   },
   show: {
     opacity: 1,
-    y: 0,
+    scale: 1,
     transition: {
       duration: 0.5,
       ease: "easeOut",

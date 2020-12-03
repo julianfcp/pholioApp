@@ -11,10 +11,8 @@ const Toggle = ({ children, title }) => {
   if (toggle) {
     // if click toggle is true then animate the element
     controls.start("show");
-    console.log("if");
   } else {
     controls.start("hidden");
-    console.log("else");
   }
   return (
     <motion.div
