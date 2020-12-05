@@ -103,3 +103,15 @@ export const scrollShow = {
     },
   },
 };
+export const MenuLine = {
+  hidden: {
+    width: 0,
+  },
+  show: {
+    width: "50%",
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
