@@ -50,7 +50,6 @@ const ContactUs = () => {
 
 const StyledContact = styled(motion.div)`
   background-color: white;
-  border: 1px solid red;
   padding: 5rem 10rem;
   min-height: 90vh;
   color: #353535;
