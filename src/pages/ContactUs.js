@@ -14,44 +14,87 @@ const ContactUs = () => {
       animate="show"
       exit="exit"
     >
-      <StyledTitle>
-        <StyledHide>
-          <motion.h2>Contact Us</motion.h2>
-        </StyledHide>
-      </StyledTitle>
-      <div>
-        <StyledHide>
-          <StyledSocial variants={titleAnim}>
-            <StyledCircle></StyledCircle>
-            <h2>Send us an Email</h2>
-          </StyledSocial>
-        </StyledHide>
-        <StyledHide>
-          <StyledSocial variants={titleAnim}>
-            <StyledCircle></StyledCircle>
-            <h2>Send a Message</h2>
-          </StyledSocial>
-        </StyledHide>
-        <StyledHide>
-          <StyledSocial variants={titleAnim}>
-            <StyledCircle></StyledCircle>
-            <h2>Send your socials</h2>
-          </StyledSocial>
-        </StyledHide>
-      </div>
-      <ScrollToTop />
+      <StyledContactForm>
+        <StyledTitle>
+          <StyledHide>
+            <motion.h2>Contact Us</motion.h2>
+          </StyledHide>
+        </StyledTitle>
+        <div>
+          <StyledHide>
+            <StyledSocial variants={titleAnim}>
+              <input type="text" placeholder="Name" />
+            </StyledSocial>
+          </StyledHide>
+          <StyledHide>
+            <StyledSocial variants={titleAnim}>
+              <input type="text" placeholder="Email" />
+            </StyledSocial>
+          </StyledHide>
+          <StyledHide>
+            <StyledSocial variants={titleAnim}>
+              <textarea
+                rows="4"
+                cols="60"
+                name="comment"
+                placeholder="Comments"
+              ></textarea>
+            </StyledSocial>
+          </StyledHide>
+        </div>
+        <ScrollToTop />
+      </StyledContactForm>
     </StyledContact>
   );
 };
 
 const StyledContact = styled(motion.div)`
   background-color: white;
+  border: 1px solid red;
   padding: 5rem 10rem;
   min-height: 90vh;
   color: #353535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 1274px) {
     padding: 5rem;
     font-size: 1rem;
+  }
+`;
+
+const StyledContactForm = styled(motion.div)`
+  background-color: white;
+  min-width: 450px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  h2 {
+  }
+  input {
+    height: 56px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0px 10px;
+    border: 1px solid #e7e7e7;
+    font-size: 24px;
+    transition: 0.3s all;
+    margin: 10px 0px;
+  }
+  input:focus {
+    outline: none;
+  }
+  textarea {
+    border-radius: 6px;
+    padding: 10px 10px;
+    border: 1px solid #e7e7e7;
+    font-size: 24px;
+    transition: 0.3s all;
+    margin: 10px 0px;
+  }
+  textarea:focus {
+    outline: none;
   }
 `;
 

@@ -10,7 +10,7 @@ export const StyledAbout = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
-  @media (max-width: 1274px) {
+  @media (max-width: 1200px) {
     display: block;
     padding: 3rem 3rem;
   }
@@ -22,7 +22,7 @@ export const StyledDescription = styled.div`
     font-weight: lighter;
   }
   z-index: 2;
-  @media (max-width: 1274px) {
+  @media (max-width: 1200px) {
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;
