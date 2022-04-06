@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/pholioApp/static/js/main.da3373e3.chunk.js",
+    "main.js.map": "/pholioApp/static/js/main.da3373e3.chunk.js.map",
+    "runtime-main.js": "/pholioApp/static/js/runtime-main.3bb7198c.js",
+    "runtime-main.js.map": "/pholioApp/static/js/runtime-main.3bb7198c.js.map",
+    "static/js/2.05b02b08.chunk.js": "/pholioApp/static/js/2.05b02b08.chunk.js",
+    "static/js/2.05b02b08.chunk.js.map": "/pholioApp/static/js/2.05b02b08.chunk.js.map",
+    "static/js/3.d9eaf0e3.chunk.js": "/pholioApp/static/js/3.d9eaf0e3.chunk.js",
+    "static/js/3.d9eaf0e3.chunk.js.map": "/pholioApp/static/js/3.d9eaf0e3.chunk.js.map",
+    "index.html": "/pholioApp/index.html",
+    "static/js/2.05b02b08.chunk.js.LICENSE.txt": "/pholioApp/static/js/2.05b02b08.chunk.js.LICENSE.txt",
+    "static/media/athlete-small.9c7a85d4.png": "/pholioApp/static/media/athlete-small.9c7a85d4.png",
+    "static/media/athlete2.b216a5ad.png": "/pholioApp/static/media/athlete2.b216a5ad.png",
+    "static/media/clock.4b7cde7e.svg": "/pholioApp/static/media/clock.4b7cde7e.svg",
+    "static/media/diaphragm.db801491.svg": "/pholioApp/static/media/diaphragm.db801491.svg",
+    "static/media/good-times2.4ea1be17.jpg": "/pholioApp/static/media/good-times2.4ea1be17.jpg",
+    "static/media/goodtimes-small.94ab060d.png": "/pholioApp/static/media/goodtimes-small.94ab060d.png",
+    "static/media/home1.9836de69.png": "/pholioApp/static/media/home1.9836de69.png",
+    "static/media/home2.a65a4256.png": "/pholioApp/static/media/home2.a65a4256.png",
+    "static/media/money.72da7c48.svg": "/pholioApp/static/media/money.72da7c48.svg",
+    "static/media/teamwork.aa71db2e.svg": "/pholioApp/static/media/teamwork.aa71db2e.svg",
+    "static/media/the-racer2.580f15cd.jpg": "/pholioApp/static/media/the-racer2.580f15cd.jpg",
+    "static/media/theracer-small.51874213.png": "/pholioApp/static/media/theracer-small.51874213.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3bb7198c.js",
+    "static/js/2.05b02b08.chunk.js",
+    "static/js/main.da3373e3.chunk.js"
+  ]
+}
