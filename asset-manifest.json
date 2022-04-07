@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/pholioApp/static/js/main.da3373e3.chunk.js",
-    "main.js.map": "/pholioApp/static/js/main.da3373e3.chunk.js.map",
+    "main.js": "/pholioApp/static/js/main.cfd361d4.chunk.js",
+    "main.js.map": "/pholioApp/static/js/main.cfd361d4.chunk.js.map",
     "runtime-main.js": "/pholioApp/static/js/runtime-main.3bb7198c.js",
     "runtime-main.js.map": "/pholioApp/static/js/runtime-main.3bb7198c.js.map",
     "static/js/2.05b02b08.chunk.js": "/pholioApp/static/js/2.05b02b08.chunk.js",
@@ -26,6 +26,6 @@
   "entrypoints": [
     "static/js/runtime-main.3bb7198c.js",
     "static/js/2.05b02b08.chunk.js",
-    "static/js/main.da3373e3.chunk.js"
+    "static/js/main.cfd361d4.chunk.js"
   ]
 }
