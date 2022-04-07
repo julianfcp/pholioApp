@@ -108,12 +108,12 @@ const StyledTitle = styled(motion.div)`
 const StyledHide = styled(motion.div)`
   overflow: hidden;
 `;
-const StyledCircle = styled.div`
+/* const StyledCircle = styled.div`
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
   background-color: #353535;
-`;
+`; */
 const StyledSocial = styled(motion.div)`
   display: flex;
   align-items: center;

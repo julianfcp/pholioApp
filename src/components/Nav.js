@@ -8,36 +8,62 @@ import styled from "styled-components";
 
 const Nav = () => {
   const { pathname } = useLocation();
+
   return (
     <StyledNav>
       <h1>
-        <Link id="logo" to="/">
+        <Link
+          id="logo"
+          to={{
+            pathname: "/pholioApp/",
+          }}
+        >
           Pholio
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">About Us</Link>
+          <Link
+            to={{
+              pathname: "/pholioApp/",
+            }}
+          >
+            About Us
+          </Link>
           <StyledLine
             variants={MenuLine}
             initial="hidden"
-            animate={{ width: pathname === "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/pholioApp/" ? "50%" : "0%" }}
           />
         </li>
         <li>
-          <Link to="/work">Our Work</Link>
+          <Link
+            to={{
+              pathname: "/pholioApp/work",
+            }}
+          >
+            Our Work
+          </Link>
           <StyledLine
             variants={MenuLine}
             initial="hidden"
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/pholioApp/work" ? "50%" : "0%" }}
           />
         </li>
         <li>
-          <Link to="/contact">Contact us</Link>
+          <Link
+            to={{
+              pathname: "/pholioApp/contact",
+            }}
+          >
+            Contact us
+          </Link>
           <StyledLine
             variants={MenuLine}
             initial="hidden"
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+            animate={{
+              width: pathname === "/pholioApp/contact" ? "50%" : "0%",
+            }}
           />
         </li>
       </ul>

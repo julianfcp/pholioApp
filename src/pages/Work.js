@@ -40,7 +40,11 @@ const Work = () => {
       <StyledMovie>
         <motion.h2 variants={fade}> The Athlete</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <Link
+          to={{
+            pathname: "/pholioApp/work/the-athlete",
+          }}
+        >
           <StyledHide>
             <motion.img variants={photoAnim} src={athlete} alt="athlete" />
           </StyledHide>
@@ -54,7 +58,11 @@ const Work = () => {
       >
         <motion.h2>The Racer</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
+        <Link
+          to={{
+            pathname: "/pholioApp/work/the-racer",
+          }}
+        >
           <StyledHide>
             <motion.img variants={photoAnim} src={theracer} alt="theracer" />
           </StyledHide>
@@ -68,7 +76,11 @@ const Work = () => {
       >
         <motion.h2>Good Times</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
+        <Link
+          to={{
+            pathname: "/pholioApp/work/good-times",
+          }}
+        >
           <StyledHide>
             <motion.img variants={photoAnim} src={goodtimes} alt="goodtimes" />
           </StyledHide>

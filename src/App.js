@@ -24,16 +24,17 @@ function App() {
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route path="pholioApp/" exact>
+          <Route path="/pholioApp/" exact>
             <AboutUs />
           </Route>
-          <Route path="/work" exact>
+          <Route path="/pholioApp/work" exact>
             <Work />
           </Route>
-          <Route path="/work/:id">
+          <Route path="/pholioApp/work/:id">
+            {console.log("siszas")}
             <MovieDetail />
           </Route>
-          <Route path="/contact">
+          <Route path="/pholioApp/contact">
             <ContactUs />
           </Route>
         </Switch>
